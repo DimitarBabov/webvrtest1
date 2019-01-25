@@ -20,10 +20,13 @@
 	
 	 <!--a-videosphere  src="#tunnel" width="16" height="9" position="0 0 -20" ></a-videosphere-->     
 	 
-	<a-videosphere src="#tunnel" stereo="eye:left"  ></a-videosphere>
-	<a-videosphere src="#tunnel" stereo="eye:right" ></a-videosphere>
+	<a-videosphere src="#tunnel" stereo="eye:left";  rotation="0 -90 0"></a-videosphere>
+	<a-videosphere src="#tunnel" stereo="eye:right"; rotation="0 -90 0" ></a-videosphere>
 		
-	 <a-gltf-model src="#lamp" rotation="0 90 0" position="0 1 -1" scale="0.5 0.5 0.5" ></a-gltf-model>
+   <a-gltf-model src="#lamp" rotation="0 45 0" position="0 0 -5" scale="0.25 0.25 0.25" 
+   
+   >
+   </a-gltf-model>
 	 <a-camera stereocam="eye:right"></a-camera>
 		
     </a-scene>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>glTF Model - A-Frame School</title>
+    <meta name="description" content="glTF Model - A-Frame School">
+    <script src="dist/aframe-master.min.js"></script>
+	<script src="dist/aframe-stereo-component_custom.js"></script>
+	
+	
+	
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="lamp" src="models/talon_gltf/model.gltf"></a-asset-item>
+		<video id="tunnel" autoplay loop="true" src="MaryOculus.mp4"></video>
+      </a-assets>
+      
+	 
+	
+	 <!--a-videosphere  src="#tunnel" width="16" height="9" position="0 0 -20" ></a-videosphere-->     
+	 
+	<a-videosphere src="#tunnel" stereo="eye:left"  ></a-videosphere>
+	<a-videosphere src="#tunnel" stereo="eye:right" ></a-videosphere>
+		
+	 <a-gltf-model src="#lamp" rotation="0 90 0" position="0 1 -1" scale="0.5 0.5 0.5" ></a-gltf-model>
+	 <a-camera stereocam="eye:right"></a-camera>
+		
+    </a-scene>
+  </body>
+</html>

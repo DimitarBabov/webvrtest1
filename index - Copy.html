@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>glTF Model - A-Frame School</title>
+    <meta name="description" content="glTF Model - A-Frame School">
+    <script src="js/aframe-v0.8.2.min.js"></script>
+  <script src="js/aframe-stereo-component_custom.js"></script>
+  <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+	
+	
+	
+  </head>
+  <body>
+    <a-scene renderer="antialias: true">
+      <a-assets>
+        <a-asset-item id="talon" src="models/model.gltf"></a-asset-item>
+		    <video id="tunnel" autoplay loop="true" src="video/LeftRight.mp4"></video>
+      </a-assets>
+      
+	 
+	<!--Video sphere for stereoscopic view-->
+  <a-videosphere  src="#tunnel"  rotation="0 -90 0" ></a-videosphere>  
+  <!--
+	<a-videosphere src="#tunnel" stereo="eye:left; split:horizontal";  rotation="0 -90 0"></a-videosphere>
+  <a-videosphere src="#tunnel" stereo="eye:right; split:horizontal"; rotation="0 -90 0" ></a-videosphere> 
+    -->
+  <!--
+<a-sky color="black" opacity="0.75"></a-sky>
+  -->
+<a-camera 
+        id="cam"
+        stereocam="eye:right">
+        <a-cursor></a-cursor>
+</a-camera>
+
+  <!-- Title -->
+  <a-entity position="0 2.5 -4" scale="0.25 0.25 0.25" rotation="0 0 0"
+  text="value: TALON CBRNe SENSORS; color: black; align: center; wrapCount: 28"
+  geometry="primitive: plane; width: 10; height: 2"
+  material="color: white; shader: flat; visible: true; opacity:0.5">       
+</a-entity>                         
+
+<a-gltf-model src="#talon" rotation="0 0 0" position="0 0.25 -2.25" scale="1 1 1" >
+     
+      <a-animation attribute="rotation"
+      to="0 360 0"
+      repeat="indefinite"
+      dur="20000"
+      easing="linear">
+      </a-animation>
+    
+                              
+                                <!-- Buttons -->
+                          <!--First Defender RMX-->
+      <a-entity position="0 1.5 1" scale="0.5 0.5 0.5" look-at="#cam"
+        text="value: FirstDefender RMX; color: black; align: center; wrapCount: 18"
+        geometry="primitive: plane; width: 0.875; height: 0.25"
+        material="color: white; shader: flat; visible: true; opacity:0.625">       
+      </a-entity>                              <!--arrow-->
+      <a-entity line="start: 0 1.44 1; end: 0 1 0.625; color: grey; opacity:0.6" ></a-entity>
+                                <!--M41 JCAD-->
+       <a-entity position="0 1.5 0.25" scale="0.5 0.5 0.5" look-at="#cam"
+       text="value: M41 JCAD; color: black; align: center; wrapCount: 20"
+       geometry="primitive: plane; width: 0.875; height: 0.25"
+       material="color: white; shader: flat; visible: true; opacity:0.625">       
+     </a-entity>                             <!--arrow-->
+     <a-entity line="start: 0 1.44 0.25; end: 0 1.1 0.15; color: grey; opacity:0.6" ></a-entity>
+                                <!--Thermostat-->
+       <a-entity position="0.1875 1.12 -1" scale="0.5 0.5 0.5" look-at="#cam"
+       text="value: Thermostat; color: black; align: center; wrapCount: 20"
+       geometry="primitive: plane; width: 0.875; height: 0.25"
+       material="color: white; shader: flat; visible: true; opacity:0.625">       
+     </a-entity>
+                                  <!--arrow-->
+     <a-entity line="start: 0.1875 1.06 -1; end: 0.3 0.95 -0.5; color: grey; opacity:1" ></a-entity> 
+                                <!--UDR 14-->
+      <a-entity position="0.1875 0.8 -1" scale="0.5 0.5 0.5" look-at="#cam"
+      text="value: UDR-14; color: black; align: center; wrapCount: 20"
+      geometry="primitive: plane; width: 0.875; height: 0.25"
+      material="color: white; shader: flat; visible: true; opacity:0.625">       
+      </a-entity>
+                                <!--arrow-->
+      <a-entity line="start: 0.1875 0.74 -1; end: 0.3 0.625 -0.5; color: grey; opacity:1" ></a-entity> 
+        </a-gltf-model>
+  
+     
+		
+    </a-scene>
+  </body>
+</html>

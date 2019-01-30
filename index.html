@@ -14,17 +14,17 @@
     <a-scene renderer="antialias: true">
       <a-assets>
         <a-asset-item id="talon" src="models/model.gltf"></a-asset-item>
-		    <video id="tunnel" autoplay loop="true" src="video/MaryOculus.mp4"></video>
+		    <video id="tunnel" autoplay loop="true" src="video/monoscopic_2.mp4"></video>
       </a-assets>
       
 	 
   <!--Video sphere for stereoscopic view-->
-  <!-- 
-  <a-videosphere  src="#tunnel"  rotation="0 -90 0" ></a-videosphere> -->
- 
+  
+  <a-videosphere  src="#tunnel"  rotation="0 -90 0" ></a-videosphere> 
+ <!-- 
 	<a-videosphere src="#tunnel" stereo="eye:left";  rotation="0 -0 0"></a-videosphere>
   <a-videosphere src="#tunnel" stereo="eye:right"; rotation="0 -0 0" ></a-videosphere> 
-    
+    -->
   <!--
 <a-sky color="black" opacity="0.75"></a-sky>
   -->
